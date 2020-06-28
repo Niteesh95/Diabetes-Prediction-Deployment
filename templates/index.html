@@ -35,12 +35,12 @@
           <br>
           <br>
           <div class="results">
-			         {% if prediction==1 %}
+			         {{ if prediction==1 }}
 				           <h1>Prediction: <span class='true'>Oops! You have DIABETES.</span></h1>
-			          {% elif prediction==0 %}
+			         {{ elif prediction==0 }}
 				            <h1>Prediction: <span class='false'>Great! You DON'T have diabetes.</span></h1>
-			          {% endif %}
-		</div>
+			          {{ endif %}}}
+              	</div>
 
     	</div>
 

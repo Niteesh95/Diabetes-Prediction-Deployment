@@ -50,6 +50,11 @@ body {
 	background-size: 500% 500%;
 }
 
+.footer-description {
+  color: Blue;
+  text-align: center;
+}
+
 .results{
     padding: 30px 0 0;
 	  flex: 1 0 auto;
