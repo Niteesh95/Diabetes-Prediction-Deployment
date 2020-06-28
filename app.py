@@ -25,15 +25,15 @@ def predict():
     """
     for rendering result on HTML GUI
     """
-    
+
     features = [x for x in request.form.values()]
     final_features = [np.array(features)]
     prediction = classifier.predict(final_features)
-    
+
     if prediction:
-        return render_template('index.html', prediction_txt='Oops! You have diabetes.') 
+        return render_template('index.html', prediction_text='Oops! You have diabetes.')
     else:
-        return render_template('index.html', prediction_txt="Great! You don't have diabetes.") 
+        return render_template('index.html', prediction_text="Great! You don't have diabetes.")
 
 if __name__ == '__main__':
     app.run(debug=True)
