@@ -28,12 +28,12 @@ def predict():
 
     features = [x for x in request.form.values()]
     final_features = [np.array(features)]
-    prediction = classifier.predict(final_features)
+    my_prediction = classifier.predict(final_features)
 
     if prediction:
-        return render_template('index.html', prediction_text='Oops! You have diabetes.')
+        return render_template('index.html', prediction=my_prediction)
     else:
-        return render_template('index.html', prediction_text="Great! You don't have diabetes.")
+        return render_template('index.html', prediction=my_prediction)
 
 if __name__ == '__main__':
     app.run(debug=True)

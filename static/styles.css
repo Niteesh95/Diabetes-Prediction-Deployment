@@ -12,10 +12,12 @@ body {
 .ml-container{
   margin: 30px 0;
   flex: 1 0 auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
-label {
-    position: absolute;
+.label {
     text-align: left;
     margin-right: 50px;
 }
@@ -34,7 +36,6 @@ label {
     box-shadow: 3px 3px #8c8c8c;
 	   margin-top: 10px;
     padding: 10px 36px;
-    color: #000000;
     text-align: center;
 }
 
@@ -49,9 +50,15 @@ label {
 	background-size: 500% 500%;
 }
 
+.results{
+    padding: 30px 0 0;
+	  flex: 1 0 auto;
+}
 
-.footer-description{
-	color: #ffffff;
-	margin: 0;
-	font-size: 12px;
+.true{
+    color: #ff0000;
+}
+
+.false{
+    color: green;
 }
