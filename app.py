@@ -9,7 +9,6 @@ from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import numpy as np
 import pickle
-from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 
@@ -17,18 +16,20 @@ pickle_in = open('diabetes-prediction-rfc-model.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 @app.route('/')
-def welcome():
+def home():
     return render_template('index.html')
 
 
-@app.route('/predict_file', methods=["POST"])
-def predict_diabeties_file():
+@app.route('/predict', methods=['POST'])
+def predict():
     """
     for rendering result on HTML GUI
     """
+    
     features = [x for x in request.form.values()]
     final_features = [np.array(features)]
     prediction = classifier.predict(final_features)
+    
     if prediction:
         return render_template('index.html', prediction_txt='Oops! You have diabetes.') 
     else:
