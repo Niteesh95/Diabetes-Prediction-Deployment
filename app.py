@@ -30,7 +30,7 @@ def predict():
     final_features = [np.array(features)]
     my_prediction = classifier.predict(final_features)
 
-    if prediction:
+    if my_prediction:
         return render_template('index.html', prediction=my_prediction)
     else:
         return render_template('index.html', prediction=my_prediction)
