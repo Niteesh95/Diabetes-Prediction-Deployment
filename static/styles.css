@@ -31,8 +31,11 @@ body {
 }
 
 .my-cta-button{
+<<<<<<< HEAD
    	border: 2px solid #000000;
 	margin-top: 10px;
+	background: #f9f9f9;
+	   margin-top: 10px;
     padding: 10px 36px;
     text-align: center;
 }
@@ -46,7 +49,7 @@ body {
 	flex-shrink: 0;
 	position: relative;
 	padding: 20px;
-  background: Blue;
+	background: linear-gradient(blue);
 	background-size: 500% 500%;
 }
 
