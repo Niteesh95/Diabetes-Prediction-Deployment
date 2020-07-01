@@ -7,14 +7,16 @@ body {
 .heading_font {
   position: relative;
   background-size: 500% 500%;
-  color: red;
+  color: white;
   text-align: center;
   font-family:  cursive;
 }
 
 
 .w3-container {
-  color: Blue;
+  background: teal;
+  color: white;
+  font-style: oblique;
   text-align: center;
   font-family:  inherit;
 }
@@ -57,11 +59,11 @@ body {
 	padding: 7px;
 }
 
-.footer{
+.footer {
 	flex-shrink: 0;
 	position: relative;
 	padding: 20px;
-	background: linear-gradient(blue);
+	background: teal;
 	background-size: 500% 500%;
 }
 
