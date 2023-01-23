@@ -6,13 +6,14 @@ Created on Wed Jun 24 11:45:56 2020
 """
 
 from flask import Flask, request, jsonify, render_template
-import pandas as pd
 import numpy as np
 import pickle
+# from imblearn.ensemble import BalancedBaggingClassifier
+
 
 app = Flask(__name__)
 
-pickle_in = open('diabetes-prediction-rfc-model.pkl', 'rb')
+pickle_in = open('diabetes_model.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 @app.route('/')
